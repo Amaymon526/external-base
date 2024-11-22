@@ -32,7 +32,7 @@ int main() {
     while (true) {
         if (ammo < maxAmmo) {
             if (!WriteMemory(hProcess, ammoAddress, &maxAmmo, sizeof(int))) {
-                cerr << "Fehler beim Schreiben der Munition. Fehler: " << GetLastError() << endl;
+                cerr << "Cant Write memory. Error: " << GetLastError() << endl;
             }
         }
 
